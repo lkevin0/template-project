@@ -24,6 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Install moleculer-cli
+      run: yarn global add moleculer-cli
     - name: Make target directory
       run: mkdir ./target
     - name: Install dependencies
