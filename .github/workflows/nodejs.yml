@@ -31,5 +31,5 @@ jobs:
     - name: Install dependencies
       run: yarn
     - name: Run tests
-      run: jest --testMatch '<rootDir>/unit/*.spec.js' --no-cache --config ./test/jest.config.js
+      run: yarn test
 
