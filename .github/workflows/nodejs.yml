@@ -28,8 +28,10 @@ jobs:
       run: yarn global add moleculer-cli
     - name: Make target directory
       run: mkdir ./target
+    - name: init
+      run: yarn init -y
     - name: Install dependencies
-      run: yarn
+      run: yarn add jest exeq rimraf
     - name: Run tests
-      run: yarn test
+      run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --no-cache --config ./test/jest.config.js
 
