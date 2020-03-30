@@ -1,0 +1,14 @@
+{
+  "name": "moleculer-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "exeq": "^3.0.0",
+    "jest": "^25.2.1",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "test": "jest --testMatch '<rootDir>/unit/*.spec.js' --no-cache --config ./test/jest.config.js"
+  }
+}
