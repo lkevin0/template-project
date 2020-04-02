@@ -6,7 +6,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo2 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init  ${process.cwd()} api-mongo2 --answers ${process.cwd()}/test/fixtures/answers/api-mongo2.json --no-install`,
+            `./node_modules/.bin/moleculer init  ${process.cwd()} api-mongo2 --answers ${process.cwd()}/test/fixtures/answers/api-mongo2.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo2/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo2/src/index.d.ts')).toBeTruthy();
@@ -38,7 +38,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo3 project', async () => {
         await exeq([
             `cd  ${process.cwd()}/target`,
-            `moleculer init  ${process.cwd()} api-mongo3 --answers ${process.cwd()}/test/fixtures/answers/api-mongo3.json --no-install`,
+            `./node_modules/.bin/moleculer init  ${process.cwd()} api-mongo3 --answers ${process.cwd()}/test/fixtures/answers/api-mongo3.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo3/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo3/src/index.d.ts')).toBeTruthy();
@@ -70,7 +70,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo4 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api-mongo4 --answers ${process.cwd()}/test/fixtures/answers/api-mongo4.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api-mongo4 --answers ${process.cwd()}/test/fixtures/answers/api-mongo4.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo4/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo4/src/index.d.ts')).toBeTruthy();
@@ -102,7 +102,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo5 project', async () => {
         await exeq([
             `cd ./target`,
-            `moleculer init ${process.cwd()} api-mongo5 --answers ${process.cwd()}/test/fixtures/answers/api-mongo5.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api-mongo5 --answers ${process.cwd()}/test/fixtures/answers/api-mongo5.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo5/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo5/src/index.d.ts')).toBeTruthy();
@@ -134,7 +134,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo6 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init .. api-mongo6 --answers ${process.cwd()}/test/fixtures/answers/api-mongo6.json --no-install`,
+            `./node_modules/.bin/moleculer init .. api-mongo6 --answers ${process.cwd()}/test/fixtures/answers/api-mongo6.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo6/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo6/src/index.d.ts')).toBeTruthy();
@@ -166,7 +166,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo7 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api-mongo7 --answers ${process.cwd()}/test/fixtures/answers/api-mongo7.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api-mongo7 --answers ${process.cwd()}/test/fixtures/answers/api-mongo7.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo7/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo7/src/index.d.ts')).toBeTruthy();
@@ -198,7 +198,7 @@ describe('create api with mongo project', () => {
     it('create api-mongo-only project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api-mongo-only --answers ${process.cwd()}/test/fixtures/answers/api-mongo-only.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api-mongo-only --answers ${process.cwd()}/test/fixtures/answers/api-mongo-only.json --no-install`,
         ]);
         expect(existsSync('./target/api-mongo-only/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-mongo-only/src/index.d.ts')).toBeTruthy();

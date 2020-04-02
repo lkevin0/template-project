@@ -6,7 +6,7 @@ describe('create api project', () => {
     it('create api9 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api9 --answers ${process.cwd()}/test/fixtures/answers/api9.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api9 --answers ${process.cwd()}/test/fixtures/answers/api9.json --no-install`,
         ]);
         expect(existsSync('./target/api9/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api9/src/mixins/mongodb.mixin.ts')).toBeFalsy();
@@ -37,7 +37,7 @@ describe('create api project', () => {
     it('create api10 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api10 --answers ${process.cwd()}/test/fixtures/answers/api10.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api10 --answers ${process.cwd()}/test/fixtures/answers/api10.json --no-install`,
         ]);
         expect(existsSync('./target/api10/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api10/src/mixins/mongodb.mixin.ts')).toBeFalsy();
@@ -66,7 +66,7 @@ describe('create api project', () => {
     it('create api11 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api11 --answers ${process.cwd()}/test/fixtures/answers/api11.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api11 --answers ${process.cwd()}/test/fixtures/answers/api11.json --no-install`,
         ]);
         expect(existsSync('./target/api11/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api11/src/mixins/mongodb.mixin.ts')).toBeFalsy();
@@ -97,7 +97,7 @@ describe('create api project', () => {
     it('create api12 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api12 --answers ${process.cwd()}/test/fixtures/answers/api12.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api12 --answers ${process.cwd()}/test/fixtures/answers/api12.json --no-install`,
         ]);
         expect(existsSync('./target/api12/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api12/src/mixins/mongodb.mixin.ts')).toBeFalsy();
@@ -128,7 +128,7 @@ describe('create api project', () => {
     it('create api13 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api13 --answers ${process.cwd()}/test/fixtures/answers/api13.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api13 --answers ${process.cwd()}/test/fixtures/answers/api13.json --no-install`,
         ]);
         expect(existsSync('./target/api13/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api13/src/mixins/mongodb.mixin.ts')).toBeFalsy();
@@ -159,7 +159,7 @@ describe('create api project', () => {
     it('create api14 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api14 --answers ${process.cwd()}/test/fixtures/answers/api14.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api14 --answers ${process.cwd()}/test/fixtures/answers/api14.json --no-install`,
         ]);
         expect(existsSync('./target/api14/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api14/src/mixins/mongodb.mixin.ts')).toBeFalsy();
@@ -190,7 +190,7 @@ describe('create api project', () => {
     it('create api project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api1 --answers ${process.cwd()}/test/fixtures/answers/apiOnly.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api1 --answers ${process.cwd()}/test/fixtures/answers/apiOnly.json --no-install`,
         ]);
         expect(existsSync('./target/api1/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api1/src/services/routes.service.ts')).toBeTruthy();
@@ -209,7 +209,7 @@ describe('create api project', () => {
     it('create api with jest project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} api-jest --answers ${process.cwd()}/test/fixtures/answers/apiWithJest.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} api-jest --answers ${process.cwd()}/test/fixtures/answers/apiWithJest.json --no-install`,
         ]);
         expect(existsSync('./target/api-jest/rest/node.http')).toBeTruthy();
         expect(existsSync('./target/api-jest/src/services/routes.service.ts')).toBeTruthy();

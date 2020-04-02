@@ -6,7 +6,7 @@ describe('create mongo project', () => {
     it('create mongo-all project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo-all --answers ${process.cwd()}/test/fixtures/answers/mongo-all.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo-all --answers ${process.cwd()}/test/fixtures/answers/mongo-all.json --no-install`,
         ]);
         expect(existsSync('./target/mongo-all/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo-all/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -37,7 +37,7 @@ describe('create mongo project', () => {
     it('create mongo18 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo18 --answers ${process.cwd()}/test/fixtures/answers/mongo18.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo18 --answers ${process.cwd()}/test/fixtures/answers/mongo18.json --no-install`,
         ]);
         expect(existsSync('./target/mongo18/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo18/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -68,7 +68,7 @@ describe('create mongo project', () => {
     it('create mongo19 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo19 --answers ${process.cwd()}/test/fixtures/answers/mongo19.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo19 --answers ${process.cwd()}/test/fixtures/answers/mongo19.json --no-install`,
         ]);
         expect(existsSync('./target/mongo19/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo19/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -99,7 +99,7 @@ describe('create mongo project', () => {
     it('create mongo20 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init .. mongo20 --answers ${process.cwd()}/test/fixtures/answers/mongo20.json --no-install`,
+            `./node_modules/.bin/moleculer init .. mongo20 --answers ${process.cwd()}/test/fixtures/answers/mongo20.json --no-install`,
         ]);
         expect(existsSync('./target/mongo20/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo20/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -130,7 +130,7 @@ describe('create mongo project', () => {
     it('create mongo21 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo21 --answers ${process.cwd()}/test/fixtures/answers/mongo21.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo21 --answers ${process.cwd()}/test/fixtures/answers/mongo21.json --no-install`,
         ]);
         expect(existsSync('./target/mongo21/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo21/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -161,7 +161,7 @@ describe('create mongo project', () => {
     it('create mongo22 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo22 --answers ${process.cwd()}/test/fixtures/answers/mongo22.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo22 --answers ${process.cwd()}/test/fixtures/answers/mongo22.json --no-install`,
         ]);
         expect(existsSync('./target/mongo22/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo22/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -192,7 +192,7 @@ describe('create mongo project', () => {
     it('create mongo-jest project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo23 --answers ${process.cwd()}/test/fixtures/answers/mongo23.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo23 --answers ${process.cwd()}/test/fixtures/answers/mongo23.json --no-install`,
         ]);
         expect(existsSync('./target/mongo23/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo23/src/mixins/mongodb.mixin.ts')).toBeTruthy();
@@ -223,7 +223,7 @@ describe('create mongo project', () => {
     it('create mongo-only project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `moleculer init ${process.cwd()} mongo-only --answers ${process.cwd()}/test/fixtures/answers/mongo-only.json --no-install`,
+            `./node_modules/.bin/moleculer init ${process.cwd()} mongo-only --answers ${process.cwd()}/test/fixtures/answers/mongo-only.json --no-install`,
         ]);
         expect(existsSync('./target/mongo-only/rest/node.http')).toBeFalsy();
         expect(existsSync('./target/mongo-only/src/mixins/mongodb.mixin.ts')).toBeTruthy();
