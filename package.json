@@ -11,7 +11,5 @@
   "scripts": {
     "test": "jest --testMatch '<rootDir>/unit/*.spec.js' --no-cache --config ./test/jest.config.js"
   },
-  "dependencies": {
-    "moleculer-cli": "^0.7.0"
-  }
+  "dependencies": {}
 }
