@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ ubuntu-latest]
+        os: [ macos-latest, ubuntu-latest ]
         node-version: [10.x, 12.x, 13.x]
 
     steps:
@@ -38,7 +38,7 @@ jobs:
     - name: Make target directory
       run: mkdir ./target
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: Run tests
       run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
 
