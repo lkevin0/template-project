@@ -10,7 +10,7 @@ describe('create all project', () => {
     it('create all project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} all --answers ${process.cwd()}/test/fixtures/answers/all.json --no-install`,
+            `moleculer init ${process.cwd()} all --answers ${process.cwd()}/test/fixtures/answers/all.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/all/rest/node.http`)).toBeTruthy();
         expect(existsSync(`${process.cwd()}/target/all/src/mixins/mongodb.mixin.ts`)).toBeTruthy();

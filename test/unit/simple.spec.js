@@ -6,7 +6,7 @@ describe('create simple project', () => {
     it('create simple 25 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case25 --answers ${process.cwd()}/test/fixtures/answers/simple25.json --no-install`,
+            `moleculer init ${process.cwd()} case25 --answers ${process.cwd()}/test/fixtures/answers/simple25.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case25/rest/node.http`)).toBeFalsy();
         expect(existsSync(`${process.cwd()}/target/case25/src/index.d.ts`)).toBeFalsy();
@@ -37,7 +37,7 @@ describe('create simple project', () => {
     it('create simple 26 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case26 --answers ${process.cwd()}/test/fixtures/answers/simple26.json --no-install`,
+            `moleculer init ${process.cwd()} case26 --answers ${process.cwd()}/test/fixtures/answers/simple26.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case26/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync(`${process.cwd()}/target/case26/test`)).toBeFalsy();
@@ -59,7 +59,7 @@ describe('create simple project', () => {
     it('create simple 27 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case27 --answers ${process.cwd()}/test/fixtures/answers/simple27.json --no-install`,
+            `moleculer init ${process.cwd()} case27 --answers ${process.cwd()}/test/fixtures/answers/simple27.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case27/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync('./target/case27/test/unit/services/calculator.service.spec.ts')).toBeTruthy();
@@ -80,7 +80,7 @@ describe('create simple project', () => {
     it('create simple with lint project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case28 --answers ${process.cwd()}/test/fixtures/answers/simple-lint.json --no-install`,
+            `moleculer init ${process.cwd()} case28 --answers ${process.cwd()}/test/fixtures/answers/simple-lint.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case28/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync('./target/case28/test')).toBeFalsy();
@@ -101,7 +101,7 @@ describe('create simple project', () => {
     it('create simple 29 project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case29 --answers ${process.cwd()}/test/fixtures/answers/simple29.json --no-install`,
+            `moleculer init ${process.cwd()} case29 --answers ${process.cwd()}/test/fixtures/answers/simple29.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case29/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync('./target/case29/test/unit/services/calculator.service.spec.ts')).toBeTruthy();
@@ -122,7 +122,7 @@ describe('create simple project', () => {
     it('create simple with prettier project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case30 --answers ${process.cwd()}/test/fixtures/answers/simple-prettier.json --no-install`,
+            `moleculer init ${process.cwd()} case30 --answers ${process.cwd()}/test/fixtures/answers/simple-prettier.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case30/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync('./target/case30/test')).toBeFalsy();
@@ -143,7 +143,7 @@ describe('create simple project', () => {
     it('create simple with jest project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case31 --answers ${process.cwd()}/test/fixtures/answers/simpleWithJest.json --no-install`,
+            `moleculer init ${process.cwd()} case31 --answers ${process.cwd()}/test/fixtures/answers/simpleWithJest.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case31/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync('./target/case31/test/unit/services/calculator.service.spec.ts')).toBeTruthy();
@@ -161,7 +161,7 @@ describe('create simple project', () => {
     it('create simple project', async () => {
         await exeq([
             `cd ${process.cwd()}/target`,
-            `./node_modules/.bin/moleculer init ${process.cwd()} case32 --answers ${process.cwd()}/test/fixtures/answers/simple.json --no-install`,
+            `moleculer init ${process.cwd()} case32 --answers ${process.cwd()}/test/fixtures/answers/simple.json --no-install`,
         ]);
         expect(existsSync(`${process.cwd()}/target/case32/src/services/calculator.service.ts`)).toBeTruthy();
         expect(existsSync('./target/case32/test')).toBeFalsy();
