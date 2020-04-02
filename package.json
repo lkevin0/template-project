@@ -9,6 +9,6 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "test": "jest --testMatch '<rootDir>/unit/*.spec.js' --no-cache --config ./test/jest.config.js"
+    "test": "jest --no-cache --config ./__tests__/jest.config.js"
   }
 }
