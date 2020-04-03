@@ -46,7 +46,7 @@ jobs:
         moleculer init .. t1 --install -a ../test/fixtures/answers/all.json
         cd ./t1
         ./node_modules/.bin/jest --testMatch '<rootDir>/test/unit/**/*.spec.ts' --config jest.config.js
-      if: runner.os == 'Windows'
+      # if: runner.os == 'Windows'
       working-directory: ./target
     # - name: yarn install
     #   run: yarn
