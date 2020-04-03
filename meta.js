@@ -113,7 +113,10 @@ module.exports = function(values) {
                 type: "confirm",
                 name: "install",
                 message: "Would you like to run 'yarn'?",
-                default: true
+                default: true,
+                when() {
+                    return exeq !== undefined;
+                }
             }
         ],
         metalsmith: {
