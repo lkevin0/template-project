@@ -1,5 +1,13 @@
 "use strict";
-const exeq = require('exeq');
+let exeq = undefined;
+try {
+    exeq = require('exeq');
+} catch(error) {
+    if(error.code === 'MODULE_NOT_FOUND') {
+        console.log(`Tip: cd ~ && yarn add exeq`);
+    }
+}
+
 module.exports = function(values) {
     return {
         questions: [
@@ -135,7 +143,7 @@ module.exports = function(values) {
             },
             complete(metalsmith) {
                 const data = metalsmith.metadata();
-                if(data.install) {
+                if(data.install && exeq) {
                     exeq([`cd ${data.projectPath}`, 'yarn', `code ${data.projectPath}`]);
                 }
             }
