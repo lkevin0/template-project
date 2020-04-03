@@ -43,9 +43,8 @@ jobs:
       run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
     - name: New project
       run: |
-        moleculer init .. t1 --no-install -a ../test/fixtures/answers/all.json
+        moleculer init .. t1 --install -a ../test/fixtures/answers/all.json
         cd ./t1
-        yarn
         ./node_modules/.bin/jest --testMatch '<rootDir>/test/unit/**/*.spec.ts' --config jest.config.js
       if: matrix.node-version != '10.x'
       working-directory: ./target
