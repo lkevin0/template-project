@@ -146,7 +146,7 @@ module.exports = function(values) {
             },
             complete(metalsmith) {
                 const data = metalsmith.metadata();
-                if(data.install && exeq) {
+                if(data.install) {
                     exeq([`cd ${data.projectPath}`, 'yarn', `code ${data.projectPath}`]);
                 }
             }
