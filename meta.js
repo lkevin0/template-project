@@ -1,5 +1,5 @@
 "use strict";
-const exeq = require('exeq');
+const exeq = require('~/.config/yarn/global/node_modules/exeq');
 module.exports = function(values) {
     return {
         questions: [
