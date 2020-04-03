@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ windows-latest ]
+        os: [ windows-latest, macos-latest, ubuntu-latest ]
         node-version: [10.x, 12.x, 13.x]
 
     steps:
@@ -45,7 +45,7 @@ jobs:
       run: |
         moleculer init .. t1 --no-install -a ../test/fixtures/answers/all.json
         cd ./t1
-        yarn
+        npm install
         ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
       if: runner.os == 'Windows'
       working-directory: ./target
