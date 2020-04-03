@@ -40,5 +40,5 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run tests
-      run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
+      run: npm test
 
