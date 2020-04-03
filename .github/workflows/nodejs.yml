@@ -41,4 +41,7 @@ jobs:
       run: npm install
     - name: Run tests
       run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
-
+    - name: New project
+      run: moleculer init .. t1 --no-install -a ../test/fixtures/answers/all.json
+      if: runner.os == 'Windows'
+      working-directory: ./target
