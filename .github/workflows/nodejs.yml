@@ -51,10 +51,14 @@ jobs:
       working-directory: ./target/t1
     - name: list directories
       run: ls -la ./node_modules/jest
-      if: matrix.node-version != '10.x'
+      if: matrix.node-version != '10.x' && runner.os != 'Windows'
+      working-directory: ./target/t1
+    - name: list directories
+      run: dir ./node_modules/jest
+      if: matrix.node-version != '10.x' && runner.os == 'Windows'
       working-directory: ./target/t1
     - name: Run tests
-      run: ./node_modules/jest/bin/jest --testMatch '<rootDir>/test/unit/**/*.spec.ts' --config jest.config.js
+      run: ./node_modules/jest/bin/jest.js --testMatch '<rootDir>/test/unit/**/*.spec.ts' --config jest.config.js
       if: matrix.node-version != '10.x'
       working-directory: ./target/t1
     # - name: yarn install
