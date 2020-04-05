@@ -35,12 +35,12 @@ jobs:
     #       ${{ runner.OS }}-
     - name: Install moleculer-cli
       run: npm install -g moleculer-cli
-    - name: Make target directory
-      run: mkdir ./target
+    # - name: Make target directory
+    #   run: mkdir ./target
     - name: Install dependencies
       run: npm install
     - name: Run tests
-      run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
+      run: ./node_modules/.bin/jest --testMatch '<rootDir>/src/*.spec.js' --config test/jest.config.js
     - name: New project
       run: |
         moleculer init .. t1 --install -a ../test/fixtures/answers/all.json

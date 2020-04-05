@@ -2,6 +2,10 @@ const exeq = require('exeq');
 const { existsSync, readFileSync } = require('fs');
 const rimraf = require('rimraf');
 
+if(!existsSync(`${process.cwd()}/target`)) {
+    mkdirSync(`${process.cwd()}/target`);
+}
+
 describe('create mongo project', () => {
     it('create mongo-all project', async () => {
         await exeq([
