@@ -50,7 +50,7 @@ jobs:
       if: matrix.node-version != '10.x'
       working-directory: ./target/t1
     - name: list directories
-      run: ls -la ./target/t1/node_modules
+      run: ls -la ./node_modules
       if: matrix.node-version != '10.x'
       working-directory: ./target/t1
     - name: Run tests
