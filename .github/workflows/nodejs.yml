@@ -34,7 +34,7 @@ jobs:
     #       ${{ runner.OS }}-node-
     #       ${{ runner.OS }}-
     - name: Install moleculer-cli
-      run: npm install -g moleculer-cli
+      run: yarn global add moleculer-cli
     # - name: Make target directory
     #   run: mkdir ./target
     - name: Install dependencies
