@@ -1,5 +1,5 @@
 const exeq = require('exeq');
-const { existsSync, readFileSync } = require('fs');
+const { existsSync, mkdirSync, readFileSync } = require('fs');
 const rimraf = require('rimraf');
 
 if(!existsSync(`${process.cwd()}/target`)) {
