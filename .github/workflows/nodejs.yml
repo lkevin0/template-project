@@ -33,26 +33,26 @@ jobs:
     #     restore-keys: |
     #       ${{ runner.OS }}-node-
     #       ${{ runner.OS }}-
-    # - name: Install moleculer-cli
-    #   run: npm install -g moleculer-cli
+    - name: Install moleculer-cli
+      run: npm install -g moleculer-cli
     # - name: Make target directory
     #   run: mkdir ./target
-    # - name: Install dependencies
-    #   run: npm install
-    # - name: Run tests
-    #   run: ./node_modules/.bin/jest --testMatch '<rootDir>/src/*.spec.js' --config test/jest.config.js
-    # - name: init project
-    #   run: moleculer init .. t1 --no-install -a ../test/fixtures/answers/all.json
-    #   if: matrix.node-version != '10.x'
-    #   working-directory: ./target
-    # - name: yarn install
-    #   run: yarn install
-    #   if: matrix.node-version != '10.x'
-    #   working-directory: ./target/t1
-    # - name: Run tests
-    #   run: ./node_modules/jest/bin/jest.js --testMatch '<rootDir>/test/unit/**/*.spec.ts' --config jest.config.js
-    #   if: matrix.node-version != '10.x'
-    #   working-directory: ./target/t1
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests
+      run: ./node_modules/.bin/jest --testMatch '<rootDir>/src/*.spec.js' --config test/jest.config.js
+    - name: init project
+      run: moleculer init .. t1 --no-install -a ../test/fixtures/answers/all.json
+      if: matrix.node-version != '10.x'
+      working-directory: ./target
+    - name: yarn install
+      run: yarn install
+      if: matrix.node-version != '10.x'
+      working-directory: ./target/t1
+    - name: Run tests
+      run: ./node_modules/jest/bin/jest.js --testMatch '<rootDir>/test/unit/**/*.spec.ts' --config jest.config.js
+      if: matrix.node-version != '10.x'
+      working-directory: ./target/t1
     # - name: yarn install
     #   run: yarn
     #   if: runner.os == 'Windows'
@@ -61,19 +61,3 @@ jobs:
     #   run: ./node_modules/.bin/jest --testMatch '<rootDir>/unit/*.spec.js' --config test/jest.config.js
     #   if: runner.os == 'Windows'
     #   working-directory: ./target/t1
-  test-all:
-    needs: build
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ windows-latest, macos-latest, ubuntu-latest ]
-        node-version: [10.x, 12.x, 13.x]
-
-    steps:
-      - name: Install moleculer-cli
-        run: npm install -g moleculer-cli
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: ./node_modules/.bin/jest --config test/jest.config.js ./test/src/all.spec.js
